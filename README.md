@@ -57,7 +57,7 @@ GNU ___wget___ is like ___curl___, you can get it from [here](https://www.gnu.or
 #### Always do this on Windows
 
 ```bash
-pip install pycocotools-windows
+> pip install pycocotools-windows
 ```
 
 Otherwise nothing will work, like most things on Windows
@@ -70,19 +70,19 @@ wget https://pjreddie.com/media/files/yolov3.weights
 
 Using the pre-built CPU-only version of OpenCV:
 ```bash
-pip install opencv-python
+> pip install opencv-python
 ```
 
 Train:
 
 ```bash
-python train.py
+> python train.py
 ```
 
 Run:
 
 ```bash
-python run.py
+> python run.py
 ```
 
 Based on the original architecture, using ResNet-101 as the encoder, and a customized RNN as the decoder
