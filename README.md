@@ -66,6 +66,8 @@ Otherwise nothing will work, like most things on Windows
 wget https://pjreddie.com/media/files/yolov3.weights
 ```
 
+GNU wget is like curl, you can get it from [here](https://www.gnu.org/software/wget/)
+
 Train:
 
 ```bash
