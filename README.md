@@ -65,7 +65,7 @@ Otherwise nothing will work, like most things on Windows
 #### Download the YOLO weights (I have included the class names and config file here, but these are too big)
 
 ```bash
-wget https://pjreddie.com/media/files/yolov3.weights
+> wget https://pjreddie.com/media/files/yolov3.weights
 ```
 
 Using the pre-built CPU-only version of OpenCV:
