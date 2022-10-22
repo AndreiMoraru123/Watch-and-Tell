@@ -77,3 +77,22 @@ Run:
 ```bash
 python run.py
 ```
+
+Based on the original architecture, using ResNet-101 as the encoder, and a customized RNN as the decoder
+
+![image](https://user-images.githubusercontent.com/81184255/197354631-a5a6a80e-a85a-4cea-b68f-fd45e43b7aeb.png)
+
+Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to show the model where to look
+
+```
+@misc{https://doi.org/10.48550/arxiv.1411.4555,
+  doi = {10.48550/ARXIV.1411.4555},
+  url = {https://arxiv.org/abs/1411.4555},
+  author = {Vinyals, Oriol and Toshev, Alexander and Bengio, Samy and Erhan, Dumitru},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Show and Tell: A Neural Image Caption Generator},
+  publisher = {arXiv},
+  year = {2014},
+  copyright = {arXiv.org perpetual, non-exclusive lic
+```
+
