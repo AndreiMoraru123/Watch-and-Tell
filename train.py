@@ -23,7 +23,7 @@ torch.cuda.empty_cache()
 
 batch_size = 32
 vocab_threshold = 5
-vocab_from_file = True
+vocab_from_file = False
 embed_size = 512
 hidden_size = 512
 num_epochs = 5
