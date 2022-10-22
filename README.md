@@ -6,9 +6,9 @@ Now it's on video.
 
 Here is a mini guide in Jupyter on how to use the Python COCO Api: [PythonAPI.pdf](https://github.com/AndreiMoraru123/Watch-and-Tell/files/9844733/PythonAPI.pdf)
 
-or you can look it up along with the Matlab and Lua API: https://github.com/cocodataset/cocoapi
+or you can look it up along with the MATLAB and Lua API: https://github.com/cocodataset/cocoapi
 
-### The Without Tears installation of the COCO dataset
+### The **Without Tears** installation of the COCO dataset
 
 ```bash
 %%bash
