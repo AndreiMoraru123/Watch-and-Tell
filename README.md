@@ -48,8 +48,10 @@ rm image_info_test2017.zip
 rm image_info_unlabeled2017.zip
 ```
 
-## Always do this on windows
+## Always do this on Windows
 
 ```bash
 pip install pycocotools-windows
 ```
+
+Otherwise nothing will work, like most things on Windows
