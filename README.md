@@ -68,6 +68,11 @@ Otherwise nothing will work, like most things on Windows
 wget https://pjreddie.com/media/files/yolov3.weights
 ```
 
+Using the pre-built CPU-only version of OpenCV:
+```bash
+pip install opencv-python
+```
+
 Train:
 
 ```bash
