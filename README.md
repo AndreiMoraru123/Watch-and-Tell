@@ -2,7 +2,7 @@
 
 Did you like to original [Show and Tell](https://arxiv.org/abs/1411.4555) ?
 
-Now it's on video.
+Now it's on video
 
 ![pred](https://user-images.githubusercontent.com/81184255/197354068-834c3258-b953-4cf0-b1c2-9ffa6d26d020.gif)
 
