@@ -6,7 +6,7 @@ Now it's on video.
 
 Here is a mini guide in Jupyter on how to use the Python COCO Api: [PythonAPI.pdf](https://github.com/AndreiMoraru123/Watch-and-Tell/files/9844733/PythonAPI.pdf)
 
-# The Without Tears installation of the COCO dataset
+### The Without Tears installation of the COCO dataset
 
 ```bash
 %%bash
@@ -48,10 +48,16 @@ rm image_info_test2017.zip
 rm image_info_unlabeled2017.zip
 ```
 
-## Always do this on Windows
+#### Always do this on Windows
 
 ```bash
 pip install pycocotools-windows
 ```
 
 Otherwise nothing will work, like most things on Windows
+
+#### Download the coco weights (I have included the class names and config file here, but these are too big)
+
+```bash
+wget https://pjreddie.com/media/files/yolov3.weights
+```
