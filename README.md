@@ -10,7 +10,7 @@ Here is a mini guide in Jupyter on how to use the Python COCO Api: [PythonAPI.pd
 
 or you can look it up along with the MATLAB and Lua API: https://github.com/cocodataset/cocoapi
 
-### The ___Without Tears___ installation of the COCO dataset
+### The ___Without Tears___ configuration of the COCO dataset
 
 ```bash
 %%bash
