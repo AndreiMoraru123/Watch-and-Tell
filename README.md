@@ -4,6 +4,8 @@ Did you like to original [Show and Tell](https://arxiv.org/abs/1411.4555) ?
 
 Now it's on video.
 
+![pred](https://user-images.githubusercontent.com/81184255/197354068-834c3258-b953-4cf0-b1c2-9ffa6d26d020.gif)
+
 Here is a mini guide in Jupyter on how to use the Python COCO Api: [PythonAPI.pdf](https://github.com/AndreiMoraru123/Watch-and-Tell/files/9844733/PythonAPI.pdf)
 
 or you can look it up along with the MATLAB and Lua API: https://github.com/cocodataset/cocoapi
