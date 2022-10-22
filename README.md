@@ -52,6 +52,8 @@ rm image_info_test2017.zip
 rm image_info_unlabeled2017.zip
 ```
 
+GNU ___wget___ is like ___curl___, you can get it from [here](https://www.gnu.org/software/wget/)
+
 #### Always do this on Windows
 
 ```bash
@@ -65,8 +67,6 @@ Otherwise nothing will work, like most things on Windows
 ```bash
 wget https://pjreddie.com/media/files/yolov3.weights
 ```
-
-GNU wget is like curl, you can get it from [here](https://www.gnu.org/software/wget/)
 
 Train:
 
