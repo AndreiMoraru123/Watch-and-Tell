@@ -95,4 +95,3 @@ Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to show the model whe
   year = {2014},
   copyright = {arXiv.org perpetual, non-exclusive lic
 ```
-
