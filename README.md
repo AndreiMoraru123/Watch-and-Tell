@@ -82,7 +82,7 @@ Based on the original architecture, using ResNet-101 as the encoder, and a custo
 
 ![image](https://user-images.githubusercontent.com/81184255/197354631-a5a6a80e-a85a-4cea-b68f-fd45e43b7aeb.png)
 
-Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to show the model where to look
+Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to constrain where the model should look
 
 ```
 @misc{https://doi.org/10.48550/arxiv.1411.4555,
