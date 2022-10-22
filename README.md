@@ -65,3 +65,15 @@ Otherwise nothing will work, like most things on Windows
 ```bash
 wget https://pjreddie.com/media/files/yolov3.weights
 ```
+
+Train:
+
+```bash
+python train.py
+```
+
+Run:
+
+```bash
+python run.py
+```
