@@ -132,18 +132,6 @@ def laptop_camera_go():
                     confidences.append(float(confidence))
                     boxes.append([x, y, w, h])
 
-        # this will get the largest bounding box
-        # if len(boxes) > 0:
-        #     max_box = boxes[0]
-        #     for box in boxes:
-        #         if box[2] > max_box[2] and box[3] > max_box[3]:
-        #             max_box = box
-        #     x = max_box[0]
-        #     y = max_box[1]
-        #     w = max_box[2]
-        #     h = max_box[3]
-        #     draw_prediction(frame, class_ids[0], confidences[0], round(x), round(y), round(x + w), round(y + h), colors, classes)
-
         indices = cv2.dnn.NMSBoxes(boxes, confidences, conf_threshold, nms_threshold)
 
         for i in indices:
