@@ -85,11 +85,6 @@ if __name__ == '__main__':
                 encoder.zero_grad()
                 decoder.zero_grad()
 
-                # lengths = torch.tensor(lengths)
-                # targets = pack_padded_sequence(captions, lengths, batch_first=True)[0]
-                # lengths = data_loader.dataset.caption_lengths[i_step * batch_size - batch_size:i_step * batch_size]
-                # lengths = data_loader.dataset.caption_lengths[batch_size *(i_step - 1):batch_size * i_step]
-
                 features = encoder(images)
                 outputs = decoder(features, captions)
 
