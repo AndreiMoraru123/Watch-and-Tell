@@ -54,76 +54,26 @@ class DecoderRNN(nn.Module):
         self.vocab_size = vocab_size
         self.embed_size = embed_size
 
-        # how does dropout work here?
-        # it randomly sets some of the weights to zero
-        # why do we need dropout?
-        # because it prevents overfitting
         if self.n_layers == 1:
             self.drop_prob = 0
         else:
             self.drop_prob = dropout
 
-        # why do we need an embedding layer?
-        # because we need to convert the word indices to word vectors
-        # is the embedding size the same size as the words in the vocabulary?
-        # no, the embedding size is the size of the word vectors
-        # why do we need to convert the word indices to word vectors?
-        # because the LSTM takes in word vectors as input
-        # what are word vectors ?
-        # word vectors are dense vectors that represent words
 
         self.embed = nn.Embedding(num_embeddings=self.vocab_size, embedding_dim=self.embed_size)
-
-        # why do we need an LSTM layer?
-        # because we need to predict the next word in the sentence
-        # why do we need to predict the next word in the sentence?
-        # because we need to generate a caption for the image
-        # what is the input size of the LSTM layer?
-        # the input size is the size of the word vectors
-        # what is the hidden size of the LSTM layer?
-        # the hidden size is the size of the hidden state
-        # what is the output size of the LSTM layer?
-        # the output size is the size of the word vectors
-        # why do we need to pass in the word vectors as the hidden state?
-        # because we need to pass in the previous word as the hidden state
-        # why do we need to pass in the word vectors as the output?
-        # because we need to pass in the word vectors as the input to the fully connected layer
 
         self.lstm = nn.LSTM(input_size=self.embed_size, hidden_size=self.n_hidden, num_layers=self.n_layers,
                             dropout=self.drop_prob, batch_first=True)
 
-        # why is the number of outputs equal to the number of words in the vocabulary?
-        # because we are predicting the next word in the sentence
-        # But a word is not the length of the vocabulary
-        # A word is a vector of length embed_size
-        # So the number of outputs is the number of words in the vocabulary
         self.linear = nn.Linear(in_features=self.n_hidden, out_features=self.vocab_size)
 
         self.apply(init_weights)
 
     def forward(self, features, captions):
 
-        # remove <end> token from captions
-        # why remove <end> token and not <start> token?
-        # because we are predicting the next word, so we don't need the start token
-        # and we don't need the end token because we are not predicting it
-        # why does caption have two dimensions?
-        # because we are passing in a batch of captions
-        # then where is the start inserted?
-        # the start token is inserted in the beginning of the caption
-        # where in the code ?
-        # in the dataloader
-
         captions = captions[:, :-1]
         embeds = self.embed(captions)
-        # why do we need to concatenate the features and the captions?
-        # because we need to pass in the features and the captions to the LSTM layer
         embeds = torch.cat((features.unsqueeze(1), embeds), dim=1)
-
-        # why does lstm take in a tuple?
-        # because it takes in a tuple of hidden and cell states
-        # why does lstm return a tuple?
-        # because it returns a tuple of hidden and cell states
         output, _ = self.lstm(embeds)
         output = self.linear(output)
 
