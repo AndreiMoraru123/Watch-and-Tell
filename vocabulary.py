@@ -4,14 +4,6 @@ import os.path
 from pycocotools.coco import COCO
 from collections import Counter
 
-# why do we use pickle files for vocabulary?
-# because we want to save the vocabulary for later use
-# we don't want to have to recompute the vocabulary every time we run the program
-# but why is .pkl format used?
-# because it is a binary format, and it is easy to read and write
-# can I read it?
-# yes, you can read it with pickle.load()
-
 
 class Vocabulary(object):
 
@@ -77,34 +69,18 @@ class Vocabulary(object):
 
     def add_captions(self):
         """Add all captions to the vocabulary."""
-        # what does COCO do here?
-        # it loads the annotations file
+
         coco = COCO(self.annotations_file)
         counter = Counter()
-        # and what are the keys in the annotations file?
-        # it is a dictionary with keys: info, licenses, images, annotations
         ids = coco.anns.keys()
         for i, id in enumerate(ids):
-            # are the captions stored here?
-            # yes, the captions are stored in the annotations file
             caption = str(coco.anns[id]['caption'])
-            # what does this do?
-            # it splits the caption into a list of words
-            # does it turn them into word vectors?
-            # no, it just splits the caption into a list of words
-            # where are the word vectors created in the code?
-            # they are created in the dataloader
-            # in what function?
-            # in the getitem function
             tokens = nltk.tokenize.word_tokenize(caption.lower())
             counter.update(tokens)
 
             if i % 1000 == 0:
                 print("[{}/{}] Tokenized the captions.".format(i, len(ids)))
 
-        # what does this do?
-        # it adds the words to the vocabulary
-        # if the word count is greater than the threshold
         words = [word for word, cnt in counter.items() if cnt >= self.vocab_threshold]
 
         # Add words to the vocabulary.
