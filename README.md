@@ -89,7 +89,7 @@ Run:
 Based on the original architecture, using ResNet-101 as the encoder, and a customized RNN as the decoder
 
 
-Workflow             |  Model
+CNN Encoder          |  RNN Decoder
 :-------------------------:|:-------------------------:
 ![image](https://user-images.githubusercontent.com/81184255/197387666-f218b6c5-ebad-4bd5-9908-4951cad00af2.png) |  ![image](https://user-images.githubusercontent.com/81184255/197387646-734efd36-3c67-447c-bf75-16b882ad3b33.png)
 
