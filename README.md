@@ -91,7 +91,7 @@ Based on the original architecture, using ResNet-101 as the encoder, and a custo
 
 CNN Encoder          |  RNN Decoder
 :-------------------------:|:-------------------------:
-![image](https://user-images.githubusercontent.com/81184255/197387871-4396b61c-0de0-433e-93b3-7fc3dedb1f8a.png)| ![image](https://user-images.githubusercontent.com/81184255/197387894-6bc7a20f-5a01-403f-94ee-0ca793241860.png)
+![image](https://user-images.githubusercontent.com/81184255/197387871-4396b61c-0de0-433e-93b3-7fc3dedb1f8a.png)| ![image](https://user-images.githubusercontent.com/81184255/197387930-68f0a256-572f-42b1-9b93-45068740aa88.png)
 
 Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to constrain where the model should look
 
