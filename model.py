@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 import torch.nn.init as I
 import torchvision.models as models
 
@@ -10,7 +9,7 @@ class EncoderCNN(nn.Module):
     def __init__(self, embed_size):
         super(EncoderCNN, self).__init__()
         # ResNet-101
-        resnet = models.resnet101(pretrained=True)
+        resnet = models.resnet152(pretrained=True)
 
         # behead the last linear layer (since we're not doing classification)
         modules = list(resnet.children())[:-1]
@@ -44,7 +43,7 @@ def init_weights(m):
 
 class DecoderRNN(nn.Module):
     """
-    RNN Decoder sprinkled with attention
+    RNN Decoder
     """
 
     def __init__(self, embed_size, hidden_size, vocab_size, num_layers=1, dropout=0.8):
