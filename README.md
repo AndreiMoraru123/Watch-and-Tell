@@ -86,7 +86,7 @@ Run:
 > python run.py
 ```
 
-Based on the original architecture, using ResNet-101 as the encoder, and a customized RNN as the decoder
+Based on the original architecture, using ResNet-152 as the encoder, and a customized RNN as the decoder
 
 
 CNN Encoder          |  RNN Decoder
