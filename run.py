@@ -1,5 +1,4 @@
 import cv2
-from skimage.transform import resize
 import os
 from model import EncoderCNN, DecoderRNN
 from data_loader import get_loader
@@ -26,8 +25,8 @@ transform_test = transforms.Compose([
 data_loader = get_loader(transform=transform_test,
                          mode='test')
 
-encoder_file = 'encoder-5.ckpt'
-decoder_file = 'decoder-5.ckpt'
+encoder_file = 'encoder-7.ckpt'
+decoder_file = 'decoder-7.ckpt'
 
 embed_size = 512
 hidden_size = 512
@@ -57,13 +56,12 @@ def draw_prediction(img, class_id, confidence, x, y, x_plus_w, y_plus_h, colors,
     color = colors[class_id]
     if label == 'person':
         cv2.rectangle(img, (x, y), (x_plus_w, y_plus_h), color, 2)
-        cv2.putText(img, label, (x - 10, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
-        cv2.putText(img, str(round(confidence, 2)), (x + 100, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+        # cv2.putText(img, label, (x - 10, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+        # cv2.putText(img, str(round(confidence, 2)), (x + 100, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
         roi = img[y:y_plus_h, x:x_plus_w]
 
         if roi.size != 0:
             roi = cv2.cvtColor(roi, cv2.COLOR_BGR2RGB)
-            roi = resize(roi, (600, 600, 3))
             roi = Image.fromarray((roi * 255).astype(np.uint8))
             roi = transform_test(roi)
             roi = roi.unsqueeze(0)
@@ -71,7 +69,7 @@ def draw_prediction(img, class_id, confidence, x, y, x_plus_w, y_plus_h, colors,
             features = encoder(roi)
             output = decoder.sample(features.unsqueeze(1))
             sentence = clean_sentence(output)
-            cv2.putText(img, sentence, (x - 10, y - 30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+            cv2.putText(img, sentence, (x - 10, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
 
 def clean_sentence(output):
@@ -113,8 +111,8 @@ def laptop_camera_go():
         class_ids = []
         confidences = []
         boxes = []
-        conf_threshold = 0.5
-        nms_threshold = 0.4
+        conf_threshold = 0.9
+        nms_threshold = 0.001
 
         for out in outs:
             for detection in out:
@@ -131,6 +129,18 @@ def laptop_camera_go():
                     class_ids.append(class_id)
                     confidences.append(float(confidence))
                     boxes.append([x, y, w, h])
+
+        # this will get the largest bounding box
+        # if len(boxes) > 0:
+        #     max_box = boxes[0]
+        #     for box in boxes:
+        #         if box[2] > max_box[2] and box[3] > max_box[3]:
+        #             max_box = box
+        #     x = max_box[0]
+        #     y = max_box[1]
+        #     w = max_box[2]
+        #     h = max_box[3]
+        #     draw_prediction(frame, class_ids[0], confidences[0], round(x), round(y), round(x + w), round(y + h), colors, classes)
 
         indices = cv2.dnn.NMSBoxes(boxes, confidences, conf_threshold, nms_threshold)
 
