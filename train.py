@@ -22,11 +22,11 @@ coco = COCO(annFile)
 torch.cuda.empty_cache()
 
 batch_size = 32
-vocab_threshold = 5
+vocab_threshold = 4
 vocab_from_file = False
 embed_size = 512
 hidden_size = 512
-num_epochs = 5
+num_epochs = 7
 save_every = 1
 print_every = 100
 
@@ -57,7 +57,7 @@ decoder.to(device)
 
 criterion = nn.CrossEntropyLoss().cuda() if torch.cuda.is_available() else nn.CrossEntropyLoss()
 
-params = list(decoder.parameters()) + list(encoder.parameters())
+params = list(decoder.parameters()) + list(encoder.embed.parameters())
 
 optimizer = torch.optim.Adam(params, lr=0.001)
 
