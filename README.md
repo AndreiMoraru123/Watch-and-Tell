@@ -91,7 +91,7 @@ Based on the original architecture, using ResNet-101 as the encoder, and a custo
 
 Workflow             |  Model
 :-------------------------:|:-------------------------:
-![image](https://user-images.githubusercontent.com/81184255/197387563-8858193e-2129-4b84-84f7-c914d675bd4a.png) |  ![image](https://user-images.githubusercontent.com/81184255/197387578-ed6a2688-af78-422a-9950-3903b844ccd5.png)
+![image](https://user-images.githubusercontent.com/81184255/197387563-8858193e-2129-4b84-84f7-c914d675bd4a.png) |  ![image](https://user-images.githubusercontent.com/81184255/197387646-734efd36-3c67-447c-bf75-16b882ad3b33.png)
 
 Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to constrain where the model should look
 
