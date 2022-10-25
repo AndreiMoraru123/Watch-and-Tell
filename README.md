@@ -106,3 +106,9 @@ Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to constrain where th
   year = {2014},
   copyright = {arXiv.org perpetual, non-exclusive lic
 ```
+
+### To be improved:
+
+- [ ] Migrate to OpenCV GPU build
+- [ ] Add an attention mechanism to the Decoder
+- [ ] Optimize model size and parameter for inference speed
