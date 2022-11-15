@@ -110,6 +110,6 @@ Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to constrain where th
 ### To be improved:
 
 - [x] Migrate to OpenCV GPU build
-- [ ] Add an attention mechanism to the Decoder
+- [x] Add an attention mechanism to the Decoder
 - [ ] Optimize model parameter size for inference speed
-- [ ] Change the greedy nearest word search to a beam search for the words in the vocabulary
+- [x] Change the greedy nearest word search to a beam search for the words in the vocabulary
