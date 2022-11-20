@@ -111,5 +111,5 @@ Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to constrain where th
 
 - [x] Migrate to OpenCV GPU build
 - [x] Add an attention mechanism to the Decoder
-- [ ] Optimize model parameter size for inference speed
+- [x] Optimize model parameter size for inference speed
 - [x] Change the greedy nearest word search to a beam search for the words in the vocabulary
