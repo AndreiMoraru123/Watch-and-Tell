@@ -60,7 +60,7 @@ GNU ___wget___ is like ___curl___, you can get it from [here](https://www.gnu.or
 > pip install pycocotools-windows
 ```
 
-Otherwise nothing will work, like most things on Windows
+Otherwise nothing will work.
 
 #### Download the YOLO weights (I have included the class names and config file here, but these are too big)
 
