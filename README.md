@@ -109,7 +109,7 @@ Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to constrain where th
   copyright = {arXiv.org perpetual, non-exclusive lic
 ```
 
-### To be improved:
+### To be improved: :heavy_check_mark: (Visit the new [repo](https://github.com/AndreiMoraru123/ContextCollector))
 
 - [x] Migrate to OpenCV GPU build
 - [x] Add an attention mechanism to the Decoder
