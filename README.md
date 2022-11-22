@@ -1,5 +1,7 @@
 # Watch-and-Tell
 
+# This project has been completely reworked into an improved version and is now obsolete. [Join the dark side here on the new repository](https://github.com/AndreiMoraru123/ContextCollector)
+
 Did you like the original [Show and Tell](https://arxiv.org/abs/1411.4555) ?
 
 Now it's on video
