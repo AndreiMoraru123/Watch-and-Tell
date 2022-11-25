@@ -97,7 +97,7 @@ CNN Encoder          |  RNN Decoder
 
 Using [Darknet's](https://pjreddie.com/darknet/yolo/) YOLO to constrain where the model should look
 
-```
+```bibtex
 @misc{https://doi.org/10.48550/arxiv.1411.4555,
   doi = {10.48550/ARXIV.1411.4555},
   url = {https://arxiv.org/abs/1411.4555},
