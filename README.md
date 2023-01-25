@@ -4,6 +4,8 @@
 
 Did you like the original [Show and Tell](https://arxiv.org/abs/1411.4555) ?
 
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+
 Now it's on video
 
 ![pred](https://user-images.githubusercontent.com/81184255/197354068-834c3258-b953-4cf0-b1c2-9ffa6d26d020.gif)
