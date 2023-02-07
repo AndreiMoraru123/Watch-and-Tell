@@ -1,4 +1,4 @@
-# Watch-and-Tell
+# Watch & Tell
 
 # This project has been completely reworked into an improved version and is now obsolete. [Join the dark side here on the new repository](https://github.com/AndreiMoraru123/ContextCollector)
 
