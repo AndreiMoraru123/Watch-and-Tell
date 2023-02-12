@@ -61,7 +61,7 @@ GNU ___wget___ is like ___curl___, you can get it from [here](https://www.gnu.or
 #### Always do this on Windows
 
 ```bash
-> pip install pycocotools-windows
+pip install pycocotools-windows
 ```
 
 Otherwise nothing will work.
@@ -69,25 +69,25 @@ Otherwise nothing will work.
 #### Download the YOLO weights (I have included the class names and config file here, but these are too big)
 
 ```bash
-> cd YOLO
-> wget https://pjreddie.com/media/files/yolov3.weights
+cd YOLO
+wget https://pjreddie.com/media/files/yolov3.weights
 ```
 
 Using the pre-built CPU-only version of OpenCV:
 ```bash
-> pip install opencv-python
+pip install opencv-python
 ```
 
 Train:
 
 ```bash
-> python train.py
+python train.py
 ```
 
 Run:
 
 ```bash
-> python run.py
+python run.py
 ```
 
 Based on the original architecture (and repo), this is using ResNet-152 as the encoder, and the LSTM as the decoder
