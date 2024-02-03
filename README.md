@@ -1,81 +1,25 @@
 # Watch & Tell
 
-# This project has been completely reworked into an improved version and is now obsolete. [Join the dark side here on the new repository](https://github.com/AndreiMoraru123/ContextCollector)
+## [Show and Tell](https://arxiv.org/abs/1411.4555), but on video
 
-Did you like the original [Show and Tell](https://arxiv.org/abs/1411.4555) ?
-
-Now it's on video
-
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) 	![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)![Udacity](https://img.shields.io/badge/Udacity-white?style=for-the-badge&logo=udacity&logoColor=15B8E)
+### This project has been completely reworked into an improved version and is now obsolete.
+### [Join the dark side here on the new repository](https://github.com/AndreiMoraru123/ContextCollector)
 
 ![pred](https://user-images.githubusercontent.com/81184255/197354068-834c3258-b953-4cf0-b1c2-9ffa6d26d020.gif)
 
 Here is a quick Jupyter mini guide on how to use the Python COCO Api: [PythonAPI.pdf](https://github.com/AndreiMoraru123/Watch-and-Tell/files/9844733/PythonAPI.pdf)
 
-or you can look it up along with the MATLAB and Lua API: https://github.com/cocodataset/cocoapi
-
-### The ___Without Tears___ configuration of the [COCO dataset](https://cocodataset.org/#home) (50 GB, 2017 challenge)
-
-```bash
-%%bash
-
-mkdir coco
-cd coco
-mkdir images
-cd images
-
-wget -c http://images.cocodataset.org/zips/train2017.zip
-wget -c http://images.cocodataset.org/zips/val2017.zip
-wget -c http://images.cocodataset.org/zips/test2017.zip
-wget -c http://images.cocodataset.org/zips/unlabeled2017.zip
-
-unzip train2017.zip
-unzip val2017.zip
-unzip test2017.zip
-unzip unlabeled2017.zip
-
-rm train2017.zip
-rm val2017.zip
-rm test2017.zip
-rm unlabeled2017.zip
-
-cd ../
-wget -c http://images.cocodataset.org/annotations/annotations_trainval2017.zip
-wget -c http://images.cocodataset.org/annotations/stuff_annotations_trainval2017.zip
-wget -c http://images.cocodataset.org/annotations/image_info_test2017.zip
-wget -c http://images.cocodataset.org/annotations/image_info_unlabeled2017.zip
-
-unzip annotations_trainval2017.zip
-unzip stuff_annotations_trainval2017.zip
-unzip image_info_test2017.zip
-unzip image_info_unlabeled2017.zip
-
-rm annotations_trainval2017.zip
-rm stuff_annotations_trainval2017.zip
-rm image_info_test2017.zip
-rm image_info_unlabeled2017.zip
-```
-
-GNU ___wget___ is like ___curl___, you can get it from [here](https://www.gnu.org/software/wget/)
-
-#### Always do this on Windows
-
 ```bash
 pip install pycocotools-windows
 ```
 
-Otherwise nothing will work.
+Run the [make](https://github.com/AndreiMoraru123/Watch-and-Tell/blob/main/make.sh) script to get the [COCO dataset](https://cocodataset.org/#home) (50 GB, 2017 challenge) (requires gnu [wget](https://www.gnu.org/software/wget/))
 
 #### Download the YOLO weights (I have included the class names and config file here, but these are too big)
 
 ```bash
 cd YOLO
 wget https://pjreddie.com/media/files/yolov3.weights
-```
-
-Using the pre-built CPU-only version of OpenCV:
-```bash
-pip install opencv-python
 ```
 
 Train:
