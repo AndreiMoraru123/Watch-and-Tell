@@ -7,7 +7,7 @@
 
 ![pred](https://user-images.githubusercontent.com/81184255/197354068-834c3258-b953-4cf0-b1c2-9ffa6d26d020.gif)
 
-Here is a quick Jupyter mini guide on how to use the Python COCO Api: [PythonAPI.pdf](https://github.com/AndreiMoraru123/Watch-and-Tell/files/9844733/PythonAPI.pdf)
+Quick Jupyter mini guide on how to use the [Python API](https://github.com/AndreiMoraru123/Watch-and-Tell/blob/main/api.pdf)
 
 ```bash
 pip install pycocotools-windows
